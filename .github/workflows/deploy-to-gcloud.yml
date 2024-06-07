@@ -1,10 +1,10 @@
-name: Publish to Google Cloud
+name: Build and Publish to Google Cloud
 
 on:
   push:
-    branches: [ "acceptance" ]
+    branches: [ "acceptance", "development" ]
   pull_request:
-    branches: [ "acceptance" ]
+    branches: [ "acceptance", "development" ]
 
 jobs:
   build:
@@ -13,6 +13,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Set up JDK 19
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '19'
+
+      - name: Build with Maven
+        run: mvn -B package --file ./JabberPointRedesign/pom.xml
 
       - name: Log recent commit
         run: git log -1
@@ -25,5 +34,5 @@ jobs:
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
 
-      - name: 'Use gcloud CLI'
-        run: 'gcloud storage cp target/*.jar gs://jabberpoint_acceptance/testFolder'
+      - name: 'Upload JAR to Google Cloud Storage'
+        run: gcloud storage cp ./JabberPointRedesign/target/*.jar gs://jabberpoint_acceptance_bucket/testFolder
