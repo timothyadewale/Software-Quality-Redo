@@ -36,3 +36,4 @@ jobs:
 
       - name: 'Upload JAR to Google Cloud Storage'
         run: gcloud storage cp path/to/your/project/target/*.jar gs://jabberpoint_acceptance_bucket/testFolder
+        
