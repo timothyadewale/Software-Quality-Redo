@@ -1,6 +1,8 @@
 package com.nhlstenden.JabberPoint.model;
 
-public interface Observer
-{
-    void update ();
+/**
+ * Observer interface for presentation updates.
+ */
+public interface Observer {
+    void update();
 }

@@ -7,44 +7,39 @@ import java.awt.Rectangle;
 import java.awt.image.ImageObserver;
 import java.util.Vector;
 
-public class Slide
-{
+/**
+ * Represents a slide in the presentation.
+ */
+public class Slide {
     private String title;
-    private Vector<SlideItem> items = new Vector<> ();
+    private final Vector<SlideItem> items = new Vector<>();
 
-    public Slide ()
-    {
+    public Slide() {
     }
 
-    public void append (SlideItem item)
-    {
-        items.add (item);
+    public void append(final SlideItem item) {
+        items.add(item);
     }
 
-    public Vector<SlideItem> getSlideItems ()
-    {
+    public Vector<SlideItem> getSlideItems() {
         return items;
     }
 
-    public String getTitle ()
-    {
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle (String title)
-    {
+    public void setTitle(final String title) {
         this.title = title;
     }
 
-    public void draw (Graphics g, Rectangle area, ImageObserver view)
-    {
+    public void draw(final Graphics g, final Rectangle area, final ImageObserver view) {
         int x = area.x;
         int y = area.y;
-        for (SlideItem item : items)
-        {
-            Style style = Style.getStyle (item.getLevel ());
-            item.draw (x, y, 1.0f, g, style, view);
-            y += item.getBoundingBox (g, view, 1.0f, style).height + style.getLeading ();
+        for (SlideItem item : items) {
+            Style style = Style.getStyle(item.getLevel());
+            item.draw(x, y, 1.0f, g, style, view);
+            y += item.getBoundingBox(g, view, 1.0f, style).height + style.getLeading();
         }
     }
 }

@@ -6,15 +6,18 @@ import com.nhlstenden.JabberPoint.model.Presentation;
 import com.nhlstenden.JabberPoint.view.SlideViewerFrame;
 import com.nhlstenden.JabberPoint.util.Style;
 
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
+/**
+ * The main class for starting the JabberPoint application..
+ */
 public class JabberPoint
 {
     protected static final String IOERR = "IO Error: ";
     protected static final String JABERR = "Jabberpoint Error ";
     protected static final String JABVERSION = "Jabberpoint 1.6 - OU version";
 
-    public static void main (String[] argv)
+    public static void main (final String[] argv)
     {
         Style.createStyles ();
         Presentation presentation = new Presentation ();
