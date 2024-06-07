@@ -21,7 +21,8 @@ jobs:
           java-version: '19'
 
       - name: Build with Maven
-        run: mvn clean package
+        run: mvn -f path/to/your/pom.xml clean package
+        working-directory: path/to/your/project
 
       - name: Log recent commit
         run: git log -1
@@ -35,4 +36,4 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v2'
 
       - name: 'Upload JAR to Google Cloud Storage'
-        run: 'gcloud storage cp target/*.jar gs://jabberpoint_acceptance_bucket/testFolder'
+        run: gcloud storage cp path/to/your/project/target/*.jar gs://jabberpoint_acceptance_bucket/testFolder
