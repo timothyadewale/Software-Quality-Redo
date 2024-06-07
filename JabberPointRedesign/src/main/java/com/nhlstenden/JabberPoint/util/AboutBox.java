@@ -3,11 +3,12 @@ package com.nhlstenden.JabberPoint.util;
 import java.awt.Frame;
 import javax.swing.JOptionPane;
 
-public class AboutBox
-{
-    public static void show (Frame parent)
-    {
-        JOptionPane.showMessageDialog (parent,
+/**
+ * Displays information about the application.
+ */
+public class AboutBox {
+    public static void show(final Frame parent) {
+        JOptionPane.showMessageDialog(parent,
                 "JabberPoint is a primitive slide-show program in Java(tm). It\n" +
                         "is freely copyable as long as you keep this notice and\n" +
                         "the splash screen intact.\n" +
@@ -17,7 +18,6 @@ public class AboutBox
                         "University of the Netherlands, 2002 -- now." +
                         "Author's version available from http://www.darwinsys.com/",
                 "About JabberPoint",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+                JOptionPane.INFORMATION_MESSAGE);
     }
 }
