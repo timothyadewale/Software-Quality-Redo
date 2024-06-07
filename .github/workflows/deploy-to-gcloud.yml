@@ -2,9 +2,9 @@ name: Build and Publish to Google Cloud
 
 on:
   push:
-    branches: [ "acceptance" ]
+    branches: [ "acceptance", "development" ]
   pull_request:
-    branches: [ "acceptance" ]
+    branches: [ "acceptance", "development" ]
 
 jobs:
   build:
