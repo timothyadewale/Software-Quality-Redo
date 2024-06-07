@@ -35,5 +35,4 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v2'
 
       - name: 'Upload JAR to Google Cloud Storage'
-        run: gcloud storage cp path/to/your/project/target/*.jar gs://jabberpoint_acceptance_bucket/testFolder
-        
+        run: gcloud storage cp ./JabberPointRedesign/target/*.jar gs://jabberpoint_acceptance_bucket/testFolder
