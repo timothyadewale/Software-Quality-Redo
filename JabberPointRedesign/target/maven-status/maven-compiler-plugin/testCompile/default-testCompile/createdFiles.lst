@@ -1,0 +1,16 @@
+com\nhlstenden\JabberPoint\model\SlideTest.class
+com\nhlstenden\JabberPoint\util\StyleTest.class
+com\nhlstenden\JabberPoint\model\PresentationTest.class
+com\nhlstenden\JabberPoint\util\AboutBoxTest.class
+com\nhlstenden\JabberPoint\model\XMLAccessorTest.class
+com\nhlstenden\JabberPoint\model\AccessorFactoryTest.class
+com\nhlstenden\JabberPoint\controller\MenuControllerTest.class
+com\nhlstenden\JabberPoint\model\SlideTest$FakeImageObserver.class
+com\nhlstenden\JabberPoint\model\PresentationTest$MockObserver.class
+com\nhlstenden\JabberPoint\model\SlideTest$FakeGraphics.class
+com\nhlstenden\JabberPoint\model\TextItemTest$FakeGraphics.class
+com\nhlstenden\JabberPoint\model\TextItemTest.class
+com\nhlstenden\JabberPoint\model\TextItemTest$FakeImageObserver.class
+com\nhlstenden\JabberPoint\JabberPointTest.class
+com\nhlstenden\JabberPoint\model\BitmapItemTest.class
+com\nhlstenden\JabberPoint\view\SlideViewerComponentTest.class
