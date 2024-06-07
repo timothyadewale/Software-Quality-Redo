@@ -21,14 +21,12 @@
             <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-inline</artifactId>
             <version>4.0.0</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -61,7 +59,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.nhlstenden.JabberPoint.Main</mainClass>
+                            <mainClass>com.nhlstenden.JabberPoint.JabberPoint</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
