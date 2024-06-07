@@ -1,0 +1,29 @@
+name: Publish to Google Cloud
+
+on:
+  push:
+    branches: [ "acceptance" ]
+  pull_request:
+    branches: [ "acceptance" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log recent commit
+        run: git log -1
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}'
+
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: 'Use gcloud CLI'
+        run: 'gcloud storage cp target/*.jar gs://jabberpoint_acceptance/testFolder'
