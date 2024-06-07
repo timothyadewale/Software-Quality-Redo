@@ -36,7 +36,7 @@ jobs:
           ${{ runner.os }}-m2
 
     - name: Build with Maven
-      run: mvn -B package --file ./Software-Quality-Redo/JabberPointRedesign/pom.xml
+      run: mvn -B package --file ./JabberPointRedesign/pom.xml
 
     - name: Run Checkstyle
-      run: mvn checkstyle:check --file ./Software-Quality-Redo/JabberPointRedesign/pom.xml
+      run: mvn checkstyle:check --file ./JabberPointRedesign/pom.xml
